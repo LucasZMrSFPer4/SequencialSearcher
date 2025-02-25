@@ -50,6 +50,6 @@ public class SequencialSearcher
 
     public static int[] even(int[] array)
     {
-        int[] evenArray = new int[array.length()]
+        
     }
 }
