@@ -12,8 +12,12 @@ public class SequencialSearcher
     
     public static int find(int[] array, int value)
     {
-        return value;
+        for (int i = 0; i < 10; i++)
+        {
+            if (array[i] == value)
+            {
+                return i;
+            }
+        }
     }
-
-
 }
