@@ -1,12 +1,12 @@
 public class SequencialSearcher
 {
-    private int[] array = new int[10];
+    private int[] myArray = new int[10];
 
     public SequencialSearcher()
     {
         for (int i = 0; i < 10; i++) 
         {
-            array[i] = (int) (Math.random() * 10 + 1);
+            myArray[i] = (int) (Math.random() * 10 + 1);
         }
     }
     
@@ -19,5 +19,37 @@ public class SequencialSearcher
                 return i;
             }
         }
+        return -1;
+    }
+
+    public static int max(int[] array)
+    {
+        int greatest = Integer.MIN_VALUE;
+        for (int i = 0; i < 10; i++)
+        {
+            if (array[i] > greatest)
+            {
+                greatest = array[i];
+            }
+        }
+        return greatest;
+    }
+
+    public static int min(int[] array)
+    {
+        int least = Integer.MAX_VALUE;
+        for (int i = 0; i < 10; i++)
+        {
+            if (array[i] < least)
+            {
+                least = array[i];
+            }
+        }
+        return least;
+    }
+
+    public static int[] even(int[] array)
+    {
+        int[] evenArray = new int[array.length()]
     }
 }
