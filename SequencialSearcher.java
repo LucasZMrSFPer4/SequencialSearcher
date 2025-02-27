@@ -2,7 +2,7 @@ public class SequencialSearcher
 {
     public static int find(int[] array, int value)
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < array.length; i ++)
         {
             if (array[i] == value)
             {
@@ -16,7 +16,7 @@ public class SequencialSearcher
     public static int max(int[] array)
     {
         int greatest = Integer.MIN_VALUE;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < array.length; i ++)
         {
             if (array[i] > greatest)
             {
@@ -30,7 +30,7 @@ public class SequencialSearcher
     public static int sum(int[] array)
     {
         int sum = 0;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < array.length; i ++)
         {
             sum += array[i];
         }
@@ -41,7 +41,7 @@ public class SequencialSearcher
     public static int[] even(int[] array)
     {
         int count = 0;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < array.length; i ++)
         {
             if (array[i] % 2 != 0)
             {
@@ -50,11 +50,19 @@ public class SequencialSearcher
         }
 
         int[] evenArray = new int[count];
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < array.length; i ++)
         {
             if (array[i] % 2 != 0)
             {
-                evenArray[i] = array[i];
+                for (int j = 0; j < evenArray.length; j ++)
+                {
+                    boolean filled = false;
+                    if (evenArray[j] == 0 && !filled)
+                    {
+                        evenArray[j] = array[i];
+                        filled = true;
+                    }
+                }
             }
         }
 
