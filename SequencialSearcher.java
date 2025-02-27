@@ -1,15 +1,5 @@
 public class SequencialSearcher
 {
-    private int[] myArray = new int[10];
-
-    public SequencialSearcher()
-    {
-        for (int i = 0; i < 10; i++) 
-        {
-            myArray[i] = (int) (Math.random() * 10 + 1);
-        }
-    }
-    
     public static int find(int[] array, int value)
     {
         for (int i = 0; i < 10; i++)
