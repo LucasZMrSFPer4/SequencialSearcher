@@ -9,6 +9,7 @@ public class SequencialSearcher
                 return i;
             }
         }
+
         return -1;
     }
 
@@ -22,24 +23,41 @@ public class SequencialSearcher
                 greatest = array[i];
             }
         }
+
         return greatest;
     }
 
-    public static int min(int[] array)
+    public static int sum(int[] array)
     {
-        int least = Integer.MAX_VALUE;
+        int sum = 0;
         for (int i = 0; i < 10; i++)
         {
-            if (array[i] < least)
-            {
-                least = array[i];
-            }
+            sum += array[i];
         }
-        return least;
+        
+        return sum;
     }
 
     public static int[] even(int[] array)
     {
-        
+        int count = 0;
+        for (int i = 0; i < 10; i++)
+        {
+            if (array[i] % 2 != 0)
+            {
+                count ++;
+            }
+        }
+
+        int[] evenArray = new int[count];
+        for (int i = 0; i < 10; i++)
+        {
+            if (array[i] % 2 != 0)
+            {
+                evenArray[i] = array[i];
+            }
+        }
+
+        return evenArray;
     }
 }
